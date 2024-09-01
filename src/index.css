@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.range-input {
+    accent-color:rgb(82 82 91);
+}
+
+.light-cart{
+    top: 100%;
+    transition:2s;
+    background-color: rgba(245, 245, 245, 0.455);
+}
+.Cart:hover .light-cart{
+    transition:2s;
+    top: 0;
+}
+
+.fot:hover .t{
+display: block;
+}
+
