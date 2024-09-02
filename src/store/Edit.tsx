@@ -32,9 +32,12 @@ export const Edits = createSlice({
         img: (state, actions: PayloadAction<{ index: number; file: File }>) => {
             
             state.file[actions.payload.index]=actions.payload.file
+        },
+        empty: (state, actions: PayloadAction<[]>)=>{
+state.file=actions.payload
         }
     }
 })
 
-export const { AddEdits, type, location, range, Resu, item,img } = Edits.actions;
+export const { AddEdits, type, location, range,empty, Resu, item,img } = Edits.actions;
 export default Edits.reducer;

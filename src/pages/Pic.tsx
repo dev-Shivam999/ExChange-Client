@@ -3,8 +3,10 @@ import React, { useRef, useState } from 'react';
 ;
 import PiC from '../Components/pic/pic';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
+import { useDispatch } from 'react-redux';
+import { empty } from '../store/Edit';
 
 
 const Pic: React.FC = () => {
@@ -13,6 +15,8 @@ const Pic: React.FC = () => {
     const [l, st] = useState<boolean>()
     const search = useSelector((state: { AddProfile: { file: File[] } }) => state.AddProfile.file);
 
+    const dispatch=useDispatch()
+    const navigate=useNavigate()
 
     const api = async () => {
         try {
@@ -37,8 +41,14 @@ const Pic: React.FC = () => {
             await Promise.all(uploadPromises);
             arr.push(id!)
 
-            const response: AxiosResponse<Post0> = await axios.post(`${import.meta.env.VITE_SOME_KEY}/Sel/SelPic`, {arr}, { withCredentials: true });
-            st(false);
+            const {data}: AxiosResponse<Post0> = await axios.post(`${import.meta.env.VITE_SOME_KEY}/Sel/SelPic`, {arr}, { withCredentials: true });
+            if (data.success) {
+                st(false);
+                dispatch(empty([]))
+                navigate('/')
+                
+            }
+
         } catch (error) {
             alert("check internet connection and try later");
             st(false);
@@ -46,7 +56,6 @@ const Pic: React.FC = () => {
         }
     }
 
-    console.log(l);
     return (
 
         <div className=' flex gap-2 justify-center h-[80vh] items-center  flex-wrap'>
