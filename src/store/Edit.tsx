@@ -1,10 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 
-const initialState: { file: File[], Product: {}, search: { type: string, range: Number, location: string, item: string }, Result: [] } = {
+const initialState: { file: File[], ing: File[], Product: {}, search: { type: string, range: Number, location: string, item: string }, Result: [] } = {
     Product: {},
     search: { type: "Rent", range: 50000, location: "jaipur", item: "Flat" },
-    Result: [], file: []
+    Result: [], file: [], ing: []
 }
 
 
@@ -30,14 +30,16 @@ export const Edits = createSlice({
             state.Result = actions.payload
         },
         img: (state, actions: PayloadAction<{ index: number; file: File }>) => {
-            
-            state.file[actions.payload.index]=actions.payload.file
+
+            state.file[actions.payload.index] = actions.payload.file
         },
-        empty: (state, actions: PayloadAction<[]>)=>{
-state.file=actions.payload
+        empty: (state, actions: PayloadAction<[]>) => {
+            state.file = actions.payload
+        },pic: (state, actions: PayloadAction<File>) => {
+            state.ing=[actions.payload]
         }
     }
 })
 
-export const { AddEdits, type, location, range,empty, Resu, item,img } = Edits.actions;
+export const { AddEdits, type, location,pic, range, empty, Resu, item, img } = Edits.actions;
 export default Edits.reducer;

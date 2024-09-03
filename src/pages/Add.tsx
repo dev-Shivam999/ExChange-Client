@@ -1,7 +1,6 @@
 import axios, { AxiosResponse } from "axios";
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import Left from "../Components/Add/Left";
 import Form from "../Components/Add/Form";
 
@@ -33,9 +32,9 @@ const Add: React.FC = () => {
 
    
     return (
-        <div className="flex justify-normal gap-2">
+        <div className="flex justify-normal gap-2 h-[85vh]">
           <Left/>
-            <div>
+            <div className="w-1/2 px-2">
                <Form/>
 
             </div>

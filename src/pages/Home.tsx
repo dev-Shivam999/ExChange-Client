@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import ProductItem from '../Components/body/ProductItem';
 import axios, { AxiosResponse } from 'axios';
 import Search from '../Components/Head/Search';
-
+ import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
 const Home:React.FC = () => {
    
    
@@ -35,6 +37,9 @@ const Home:React.FC = () => {
                     pro && pro.length > 0 ? pro.map((e) => <ProductItem key={e._id} p={e} />) : <div className='text-black text-center h-[50vh] flex items-center  justify-center text-5xl w-full'>Loading</div>
                 }
             </div>
+
+
+            
        </>
     );
 };

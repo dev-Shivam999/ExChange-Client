@@ -15,7 +15,7 @@ type lol = {
             number
             :
             string
-         
+         Private:boolean
           
         
 
@@ -42,7 +42,7 @@ type Ad2 = {
     ProductType: string,
     ProductDiscretion: string,
     userId: string,
-    ProductImg: string,
+    ProductImg: [],
     _id: string
 }
 
