@@ -25,6 +25,7 @@ const Form = memo(() => {
                 ProductPrice: Price.current?.value,
                 ProductType: search.type,
                 SubLoc: SubLoc.current?.value,
+                ProductName: name.current?.value,
                 ProductDiscretion: district.current?.value
             }, {
                 withCredentials: true
@@ -60,7 +61,7 @@ const Form = memo(() => {
                 <input type="number" className="border-2 w-11/12 border-zinc-600 rounded-md p-2" ref={Price} placeholder={`${search.type == "Rent" ? "monthly Rent" : "SALE ONE PRICE"}`} />
                 <textarea name="" placeholder='Share about your Property Like Area Society (BHk)' className="border-2 w-11/12 h-[20vh] border-zinc-600 rounded-md p-2" ref={district} id=""></textarea>
 
-                <input type="number" className="border-2 w-11/12 border-zinc-600 rounded-md p-2 " ref={name} placeholder='Property name eg: A beautiful Villa 3BHk ' />
+                <input type="text" className="border-2 w-11/12 border-zinc-600 rounded-md p-2 " ref={name} placeholder='Property name eg: A beautiful Villa 3BHk ' />
             </div>
             <button className="border-2 bg-zinc-600 rounded-md p-2 mt-3 w-11/12" type="submit" >Next</button>
 
