@@ -28,7 +28,7 @@ const dispatch=useDispatch()
        }
     }
    return (
-        <div className='w-[25vw] h-[20vw] bg-slate-400 rounded-md relative'>
+        <div className='w-72 h-[40vh] bg-slate-400 rounded-md relative'>
             <img src={fo} className='w-full h-full rounded-md absolute top-0 left-0' alt="" />
             <div className=' absolute h-full w-full  rounded-md flex justify-center items-center' style={{ backgroundColor: "  rgb(244 240 242 / 44%)" }}>
                <FaCamera onClick={() =>

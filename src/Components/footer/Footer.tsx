@@ -3,11 +3,11 @@ import { FaPlus } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 const Footer: React.FC = memo(() => {
     const location =useLocation()
-    console.log();
+  
     
     return (
         <footer className='fixed fot bottom-2 flex flex-col  w-[50vw] sm:w-[10vw] right-3'>
-            {location.pathname!="/Add"&&
+            {location.pathname != "/Add" ? location.pathname != "/Search"?
             <>
                 <Link to={`/Add`} className='t hidden '>
                     <div className=' bg-zinc-500 rounded-lg p-3 text-2xl'>Add you EX</div>
@@ -16,7 +16,7 @@ const Footer: React.FC = memo(() => {
                     <FaPlus />
 
                 </div>
-            </>
+            </>:null:null
             }
 
         </footer>

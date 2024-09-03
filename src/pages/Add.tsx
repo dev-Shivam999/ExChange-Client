@@ -32,9 +32,9 @@ const Add: React.FC = () => {
 
    
     return (
-        <div className="flex justify-normal gap-2 h-[85vh]">
+        <div className="flex flex-wrap justify-normal gap-2 h-[85vh]">
           <Left/>
-            <div className="w-1/2 px-2">
+            <div className=" w-full sm:w-[50%] px-2">
                <Form/>
 
             </div>

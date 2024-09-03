@@ -58,7 +58,7 @@ const Pic: React.FC = () => {
 
     return (
 
-        <div className=' flex gap-2 justify-center h-[80vh] items-center  flex-wrap'>
+        <div className=' flex gap-2 justify-center pt-5 h-[80vh] items-center  flex-wrap'>
 
 
             {[0, 1, 2, 3, 4].map((item) => <PiC key={item} value={item} />)}

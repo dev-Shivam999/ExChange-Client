@@ -5,7 +5,7 @@ const Search = () => {
 
   
     return (
-        <div className='flex h-[85vh]'>
+        <div className='flex h-[85vh] w-full flex-wrap sm:flex-nowrap'>
            
            <Filter/>
           <Output/>
