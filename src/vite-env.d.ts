@@ -36,6 +36,9 @@ type Ad = {
     _id: string
 }
 type Ad2 = {
+    username: string
+    SubLocation:string,
+    District:string
     ProductName: string,
     ProductPrice: string,
     ProductTittle: string,

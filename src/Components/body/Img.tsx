@@ -26,10 +26,10 @@ const Img = memo(({ img }: { img: [] }) => {
             {img.map((item, index) => (
                 <div
                     key={index}
-                    className={`slide ${activeIndex === index ? 'active' : 'inactive'} ${activeIndex > index ? 'left' : ''
+                    className={` absolute top-0 slide ${activeIndex === index ? 'active' : 'inactive'} ${activeIndex > index ? 'left' : ''
                         }`}
                 >
-                    <img src={item} alt="Slider Image" />
+                    <img src={item} alt="Slider  Image" />
                 </div>
             ))}
         </div>
