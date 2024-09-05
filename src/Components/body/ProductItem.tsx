@@ -18,7 +18,7 @@ const ProductItem = memo(({ p }: { p: Ad2 }) => {
                        
                         
                             <Img img={p.ProductImg} />
-                    <div style={{ backgroundColor:"rgb(82 82 91 /60%)"}} className='absolute top-3 left-2 px-2 py-1 rounded-sm text-white'>{p.ProductType}</div>
+                    <div style={{ backgroundColor: "rgb(82 82 91 /60%)" }} className='absolute top-3 left-2 px-2 py-1 rounded-sm text-white'>{p.ProductSale}</div>
                        <div style={{ backgroundColor:"rgb(82 82 91 /60%)"}} className='absolute bottom-3 right-2 px-2 py-1 rounded-sm text-white'>for {p.ProductType}</div>
                     <div style={{ backgroundColor:"rgb(82 82 91 /60%)"}} className='absolute bottom-3 left-2 px-2 py-1 rounded-sm text-white'> ₹{p.ProductPrice}</div>
                       
@@ -49,7 +49,7 @@ const ProductItem = memo(({ p }: { p: Ad2 }) => {
             </div>
                 </div>
             <div className=' w-max mx-auto p-3 rounded-b-lg'>
-                <Number userId={p} />
+                <Number pri={p.Private} userId={p} />
             </div>
         </div>
     );

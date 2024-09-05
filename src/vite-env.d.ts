@@ -34,8 +34,12 @@ type Ad = {
     UserId: string,
     ProductImg: string,
     _id: string
+    Private:boolean
 }
 type Ad2 = {
+    Private:boolean
+    ProductSale: string,
+    ProductSale:string
     username: string
     SubLocation:string,
     District:string

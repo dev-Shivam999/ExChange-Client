@@ -1,8 +1,10 @@
 import axios, { AxiosResponse } from 'axios';
 import  { memo } from 'react';
 
-const Number = memo(({userId}:{userId:Ad2}) => {
+const Number = memo(({userId,pri}:{userId:Ad2,pri:boolean}) => {
 
+    console.log(pri);
+    
     const number = async(user:Ad2) => {
         
         const { data }: AxiosResponse<Post0> = await axios.post('http://localhost:3000/user/Number', {
@@ -12,6 +14,7 @@ if (!data.success) {
     alert(data.message)
     
 }
+
 else{
         if (navigator.userAgent.includes('WhatsApp')) {
             // WhatsApp is installed
@@ -22,9 +25,17 @@ else{
         }
 }
     }
+    function Up(e:Ad2){
+alert('dealer account private ')
+    }
     return (
-        <span className=' border-2 text-white bg-black border-white rounded-md px-3 cursor-pointer py-1' onClick={() => number(userId)}>contact</span>
+<>
+{
+                pri ? <span className=' border-2 text-white bg-black border-white rounded-md px-3 cursor-pointer py-1' onClick={() => Up(userId)}>contact</span> : <span className=' border-2 text-white bg-black border-white rounded-md px-3 cursor-pointer py-1' onClick={() => number(userId)}>contact</span>
 
+
+}
+</>
     );
 });
 

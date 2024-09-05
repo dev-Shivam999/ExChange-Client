@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import ProductItem from '../Components/body/ProductItem';
 import axios, { AxiosResponse } from 'axios';
 import Search from '../Components/Head/Search';
- import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 const Home:React.FC = () => {
    
