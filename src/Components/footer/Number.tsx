@@ -3,7 +3,7 @@ import  { memo } from 'react';
 
 const Number = memo(({userId,pri}:{userId:Ad2,pri:boolean}) => {
 
-    console.log(pri);
+   
     
     const number = async(user:Ad2) => {
         
@@ -26,6 +26,7 @@ else{
 }
     }
     function Up(e:Ad2){
+        e
 alert('dealer account private ')
     }
     return (

@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import CartAdd from '../Components/body/CartAdd';
+// import CartAdd from '../Components/body/CartAdd';
 import Number from '../Components/footer/Number';
 
 const Product: React.FC = () => {
@@ -31,8 +31,11 @@ const Product: React.FC = () => {
       <>
          {val && <div className='w-full  min-h-screen sm:h-full  sm:flex items-center'>
             <div className='h-1/3 sm:w-1/2 w-full  mx-auto my-[5vw]'>
-               <img src={val?.ProductImg} className='h-[50vh] sm:h-[70vh] w-[90%] mx-auto md:object-fill' alt="" />
-            </div>
+
+               {
+                  val?.ProductImg.map(img => <img src={img} className='h-[50vh] sm:h-[70vh] w-[90%] mx-auto md:object-fill' alt="" /> )
+               }
+                </div>
 
             <div className='px-3 sm:w-1/2'>
                <div>
@@ -49,7 +52,8 @@ const Product: React.FC = () => {
                </div>
                <div className='pb-10 mt-2 flex flex-wrap gap-3'>
                   
-                  <CartAdd/> <Number userId={val}/>
+                  {/* <CartAdd/> */}
+                  <Number pri={val.Private} userId={val}/>
                </div>
             </div>
          </div>}

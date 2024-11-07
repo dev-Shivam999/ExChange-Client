@@ -10,7 +10,7 @@ const Profile = lazy(() => import("./pages/Profile"))
 const Login = lazy(() => import("./pages/Login"))
 const Sign = lazy(() => import("./pages/Sign"))
 const Pic = lazy(() => import("./pages/Pic"))
-const PC = lazy(() => import("./pages/PC"))
+// const PC = lazy(() => import("./pages/PC"))
 const Result = lazy(() => import("./pages/Result"))
 const Otp = lazy(() => import("./pages/Otp"))
 const ProfileEdits = lazy(() => import("./pages/ProfileEdits"))
@@ -67,11 +67,7 @@ const App: React.FC = memo(() => {
 
 
 
-          <Route path='/Cart' element={
-
-            <PC />
-
-          } />
+         
 
 
 

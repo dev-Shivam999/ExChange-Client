@@ -7,14 +7,14 @@ import EditsPart from "../Components/Edits/EditsPart";
 
 
 const TextEdits = () => {
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
 
     useEffect(() => {
 
         const fu = async () => {
-            const { data }: AxiosResponse<{ success: true, message: lol | string }> = await axios.get(`${import.meta.env.VITE_SOME_KEY}/user/profile`,{withCredentials:true})
+            const { data }: AxiosResponse<{ success: true, message: lol | string }> = await axios.get(`${import.meta.env.VITE_SOME_KEY}/user/profile`, { withCredentials: true })
             if (typeof data.message != "string") {
-               
+
                 dispatch(AddEdits(data.message))
 
             }
@@ -22,10 +22,10 @@ const TextEdits = () => {
         fu()
     }, [])
 
-   
- 
+
+
     return (
-       <EditsPart/>
+        <EditsPart />
     );
 };
 

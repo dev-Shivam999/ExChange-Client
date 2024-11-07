@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import Cart from './Cart';
+// import Cart from './Cart';
 import LS from './LS';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ const Header: React.FC = memo(() => {
           EX
         </Link>
         <div className='flex items-center justify-between gap-[4vw]'>
-          <Cart />
+          {/* <Cart /> */}
           <LS />
         </div>
       </>

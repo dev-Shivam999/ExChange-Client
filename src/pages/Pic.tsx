@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 
 ;
 import PiC from '../Components/pic/pic';
@@ -15,12 +15,12 @@ const Pic: React.FC = () => {
     const [l, st] = useState<boolean>()
     const search = useSelector((state: { AddProfile: { file: File[] } }) => state.AddProfile.file);
 
-    const dispatch=useDispatch()
-    const navigate=useNavigate()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const api = async () => {
         try {
-            const arr:string[]=[]
+            const arr: string[] = []
             st(true);
             const uploadPromises = search.map(async (file, i) => {
                 const data = new FormData();
@@ -35,18 +35,18 @@ const Pic: React.FC = () => {
                     throw new Error(`Failed to upload image ${i}: ${response.statusText}`);
                 }
                 const imageData = await response.json();
-               arr.push(imageData.url);
-                
+                arr.push(imageData.url);
+
             });
             await Promise.all(uploadPromises);
             arr.push(id!)
 
-            const {data}: AxiosResponse<Post0> = await axios.post(`${import.meta.env.VITE_SOME_KEY}/Sel/SelPic`, {arr}, { withCredentials: true });
+            const { data }: AxiosResponse<Post0> = await axios.post(`${import.meta.env.VITE_SOME_KEY}/Sel/SelPic`, { arr }, { withCredentials: true });
             if (data.success) {
                 st(false);
                 dispatch(empty([]))
                 navigate('/')
-                
+
             }
 
         } catch (error) {

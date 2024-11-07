@@ -8,12 +8,12 @@ import { store } from './store/store.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
-<Provider store={store}>
+    <Provider store={store}>
 
-    <BrowserRouter>
+        <BrowserRouter>
 
-    <App />
-    </BrowserRouter>,
-</Provider>
+            <App />
+        </BrowserRouter>,
+    </Provider>
 
 )
