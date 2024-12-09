@@ -1,0 +1,11 @@
+FROM node:20
+
+WORKDIR /user/app/client
+
+COPY  package*.json ./
+
+RUN npm i 
+
+COPY . .
+
+CMD [ "npm","run","dev" ]
