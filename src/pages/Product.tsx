@@ -30,7 +30,7 @@ const Product: React.FC = () => {
    return (
       <>
          {val && <div className='w-full  min-h-screen sm:h-full  '>
-            <div className='h-1/3 sm:w-1/2 w-full  mx-auto my-[5vw]'>
+            <div className='h-1/3 sm:w-1/2 w-full flex gap-1 flex-wrap  mx-auto my-[5vw]'>
 
                {
                   val?.ProductImg.map(img => <img src={img} className='h-[50vh] sm:h-[70vh] w-[90%] mx-auto md:object-fill' alt="" /> )
