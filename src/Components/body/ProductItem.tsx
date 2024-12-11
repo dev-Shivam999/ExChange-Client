@@ -24,7 +24,7 @@ const ProductItem = memo(({ p }: { p: Ad2 }) => {
                       
                       
                    
-                    <div className='w-full h-full   flex justify-center items-center absolute light-cart'>
+                    <div className='w-full h-full   flex justify-center items-center z-50 absolute light-cart'>
                         <Link to={`/Product/${p._id}`} className='bg-black text-white rounded-full p-1'> <FaPlus /></Link>
                     </div>
                 </div>

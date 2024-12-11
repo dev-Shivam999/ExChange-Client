@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import LoadImg from '../Components/pic/LoadImg';
 
 const Profile: React.FC = () => {
     const [pic,setpic]=useState<lol|null>(null)
@@ -23,7 +24,9 @@ const Profile: React.FC = () => {
         <div className='bg-white  px-4 pt-4 text-black w-full'>
             <>
                 <div className='w-full flex justify-between '>
-                    <img src={`${pic&&!pic.pic?"/vite.svg":pic?.pic}`} className='w-1/6 rounded-full bg-pink-500' alt="" />
+
+                    <LoadImg className='w-1/6 rounded-full bg-pink-500' val={`${pic && !pic.pic ? "/vite.svg" : pic?.pic}`} />
+                    
                     <button onClick={()=>navigate(`${pic?.number}/edits/text`)} className='bg-zinc-600 px-3 h-max text-white'>Edit</button>
                 </div>
                 <div>

@@ -3,6 +3,7 @@ import ProductItem from '../Components/body/ProductItem';
 import axios, { AxiosResponse } from 'axios';
 import Search from '../Components/Head/Search';
 import 'swiper/css';
+import LoadImg from '../Components/pic/LoadImg';
 const Home:React.FC = () => {
    
    
@@ -21,8 +22,7 @@ const Home:React.FC = () => {
     return (
        <>
             <div className='w-full h-[60vh]  relative' >
-                <img className='w-full h-full object-cover sm:object-fill sm:object-center   absolute top-0 left-0' src="https://www.creativefabrica.com/wp-content/uploads/2020/03/14/City-buildings-with-shadows-Graphics-3646333-1.jpg" alt="" />
-
+                <LoadImg className='w-full h-full object-cover sm:object-fill sm:object-center   absolute top-0 left-0' val='https://www.creativefabrica.com/wp-content/uploads/2020/03/14/City-buildings-with-shadows-Graphics-3646333-1.jpg'/>
             <div className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full '>
                     <Search />
             </div>

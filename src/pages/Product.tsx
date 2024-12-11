@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-// import CartAdd from '../Components/body/CartAdd';
 import Number from '../Components/footer/Number';
+import Img from '../Components/body/Img';
 
 const Product: React.FC = () => {
    const [val, SetVal] = useState<Ad2|null>(null)
@@ -29,30 +29,34 @@ const Product: React.FC = () => {
    
    return (
       <>
+         <div className='font-bold text-5xl w-max mx-auto mt-4 '>
+            Location :  {val?.SubLocation.toLocaleUpperCase()}
+         </div>
          {val && <div className='w-full  min-h-screen sm:h-full  '>
-            <div className='h-1/3 sm:w-1/2 w-full flex gap-1 flex-wrap  mx-auto my-[5vw]'>
+         
+            <div className='h-[500px]  w-[80%] mx-auto my-5'>
 
-               {
-                  val?.ProductImg.map(img => <img src={img} className='h-[50vh] sm:h-[70vh] w-[90%] mx-auto md:object-fill' alt="" /> )
-               }
+               <Img img={val?.ProductImg} className='h-[50vh] sm:h-[70vh] w-[90%]  mx-auto md:object-fill'/>
                 </div>
 
-            <div className='px-3 sm:w-1/2'>
+            <div className='px-3 mx-auto sm:w-4/5'>
+             
                <div>
-                  {val?.ProductTittle}
-               </div>
-               <div>
-                  {val?.ProductDiscretion}  </div>
-               <div>
-                  {val?.ProductPrice}
+                  <h1 className='font-bold text-5xl'>  
+                     {val?.ProductType} :
+                  </h1>
+                  <p className='text-2xl'>{val?.ProductDiscretion}</p>  </div>
+               <div className='text-4xl'>
+                  <span className='text-zinc-500'>                  {val?.ProductType == "Rent" ? "Monthly Rent : " : " Total Price : "}</span>  
+                  <span className='font-bold'>
+
+                  {  val?.ProductPrice}
+                  </span>
 
                </div>
-               <div>
-                  {val?.ProductType}
-               </div>
-               <div className='pb-10 mt-2 flex flex-wrap gap-3'>
+             
+               <div className='pb-10 my-5  flex flex-wrap gap-3'>
                   
-                  {/* <CartAdd/> */}
                   <Number pri={val.Private} userId={val}/>
                </div>
             </div>
