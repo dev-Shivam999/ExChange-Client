@@ -29,7 +29,7 @@ const Product: React.FC = () => {
    
    return (
       <>
-         {val && <div className='w-full  min-h-screen sm:h-full  sm:flex items-center'>
+         {val && <div className='w-full  min-h-screen sm:h-full  '>
             <div className='h-1/3 sm:w-1/2 w-full  mx-auto my-[5vw]'>
 
                {
