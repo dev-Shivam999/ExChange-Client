@@ -7,7 +7,7 @@ const Number = memo(({userId,pri}:{userId:Ad2,pri:boolean}) => {
     
     const number = async(user:Ad2) => {
         
-        const { data }: AxiosResponse<Post0> = await axios.post('http://localhost:3000/user/Number', {
+        const { data }: AxiosResponse<Post0> = await axios.post(`${import.meta.env.VITE_SOME_KEY}/user/Number`, {
             userId:user.userId
         }, { withCredentials: true })
 if (!data.success) {
