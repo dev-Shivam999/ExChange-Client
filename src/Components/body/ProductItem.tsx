@@ -30,10 +30,10 @@ const ProductItem = memo(({ p }: { p: Ad2 }) => {
                 </div>
                 <div className='px-3 self-start sm:self-center text-sm mt-3 sm:text-[2vw] uppercase'>
                    
-                        <div className='my-1 text-zinc-600'>
+                        <div className='my-1 text-3xl text-zinc-600'>
                             {p.ProductName}
                         </div>
-                    <div className='flex mt-3   gap-1 items-center'>
+                    <div className='flex mt-3  text-3xl  gap-1 items-center'>
                         <IoLocationOutline />{p.District}-{p.SubLocation}
                        </div>
                    
