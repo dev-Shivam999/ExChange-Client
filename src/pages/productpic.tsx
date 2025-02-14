@@ -4,6 +4,7 @@ import axios, { AxiosResponse } from 'axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 
+
 const Pic:React.FC = () => {
     const [url,setUrl]=useState<string>()
     const [next,setnext]=useState<boolean>(false)
